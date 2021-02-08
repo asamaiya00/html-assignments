@@ -1,0 +1,35 @@
+*{
+  margin-left: 5px;
+}
+li {
+  margin: 16px;
+}
+.effect {
+  background-color: aquamarine;
+  width: 160px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-block-end: 20px;
+}
+
+.effect:hover {
+  opacity: 80%;
+  text-shadow: 2px 2px 1px blue;
+}
+
+.rotate:hover {
+  transition: transform 2s ease-in-out;
+  transform: rotate(215deg);
+}
+.zoom-in:hover {
+  transition: transform 1s ease-in;
+  transform: scale(0.2);
+}
+.zoom-out:hover {
+  transition: transform 1s ease-out;
+  transform: scale(2);
+}
+.transparent:hover {
+  opacity: 20%;
+}
+
