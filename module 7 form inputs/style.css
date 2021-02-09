@@ -1,0 +1,14 @@
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+fieldset {
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+legend {
+  font-size: large;
+  font-weight: bold;
+}

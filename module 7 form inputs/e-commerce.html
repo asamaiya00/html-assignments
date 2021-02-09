@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Register yourself</h2>
+    <form>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="firstName">First Name</label>
+            <p><input type="text" name="firstName"  placeholder="First name" required></p>
+
+            <label for="lastname">Last Name</label>
+            <p><input type="text" name="lastname"  placeholder="Last name"></p>
+
+            <label for="dob">Date of birth</label>
+            <p><input type="date" name="dob" placeholder="dd/mm/yyyy"></p>
+
+            <label for="email">Email</label>
+            <p><input type="email" name="email" placeholder="example@domain.com"></p>
+        
+            <label for="url">URL</label>
+            <p><input type="url" name="url" placeholder="http://www.google.com"></p>
+
+            <label for="telephone">Telephone</label>
+            <p><input type="tel" name="telephone" placeholder="Eg. +447000 000000"></p>
+
+            <label for="skills">Skills</label>
+            <p><select name="skills" ></p>
+                <option value="alive">Staying alive</option>
+                <option value="breath">Breathing</option>
+                <option value="existing">Existing</option>
+                <option value="not_dying">Not dying</option>
+              </select>
+
+          <p><label for="skill_lvl">Skill level(1 low - 100 high)</label></p>
+            <p><input type="range" min="1" max="100" name="skill_lvl" ></p>
+            <p><Button>Submit</Button></p>
+        </fieldset>
+    </form>
+
+    <h2>Place your order</h2>
+    <form>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for= "firstName">First Name</label>
+            <p><input type="text" name="firstName"   placeholder="First name"  ></p>
+
+            <label for= "lastname">Last Name</label>
+            <p><input type="text" name="lastname"  placeholder="Last name" ></p>
+
+            <label for= "email">Email</label>
+            <p><input type="email" name="email" placeholder="example@domain.com" ></p>
+
+            <label for= "telephone">Telephone</label>
+            <p><input type="tel" name="telephone" placeholder="Eg. +447000 000000" ></p>
+
+            <label for= "shoesize">Shoe size</label>
+            <p><select  name="shoesize"></p>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+              </select>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Billing address</legend>
+            <p>
+                <label for= "address">Address</label>
+                <textarea  name="address"  required></textarea>
+            </p>
+
+            <p><label for= "postcode">Postcode</label></p>
+            <p><input type="text" name="postcode"  maxlength="6" pattern="[0-9]+" required ></p>
+
+            <p><label for= "country">Country</label></p>
+            <p><input type="text" name="country"  required ></p>
+        </fieldset>
+        <fieldset>
+            <legend>Card details</legend>
+            <fieldset>
+                <legend>Card type</legend>
+              <p>
+               <input type="radio"  name="cardType" value="AMEX" required>
+               <label for="amex">AMEX</label>
+               <input type="radio"  name="cardType" value="VISA" >
+               <label for="visa">VISA</label>
+               <input type="radio"  name="cardType" value="Mastercard" required>
+               <label for="mastercard">MasterCard</label>
+            </p>
+            </fieldset>
+            <label for="name">Name</label>
+            <p><input type="text" name="name"  placeholder="Name as it appeares on your credit card" required></p>
+           <label for="cardnumber">Card Number</label>
+            <p><input type="text" name="cardnumber"  maxlength="16" pattern="[0-9]+" required></p>
+            <label for="securitycode">Security code</label>
+            <p><input type="text" name="securitycode"  maxlength="3" pattern="[0-9]+" required ></p>
+            <label for="expirydate">Expiry Date</label>
+            <p><input type="date" name="expirydate" required > </p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <button>Place Order</button>
+        </fieldset>
+    </form>
+</body>
+</html>
