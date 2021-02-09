@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visitor Counter</title>
+  </head>
+  <body onload="count()">
+    <h1>Visitor Count: <span id="count">0</span></h1>
+    <script>
+      function count() {
+        let count = localStorage.getItem('count');
+        if (!count) {
+          localStorage.setItem('count', 0);
+        } else {
+          newCount = parseInt(count) + 1;
+          document.getElementById('count').innerHTML = newCount;
+          localStorage.setItem('count', newCount);
+        }
+      }
+    </script>
+  </body>
+</html>
