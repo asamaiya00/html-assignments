@@ -1,0 +1,55 @@
+.capital:first-letter {
+  font-size: 200%;
+  font-weight: bold;
+  color: red;
+}
+
+a:visited {
+  color: green;
+}
+a:active {
+  color: blue;
+}
+a:hover {
+  color: yellow;
+}
+
+#select::selection {
+  background-color: yellow;
+}
+
+#stack {
+  position: relative;
+  width: 700px;
+  height: 700px;
+  margin-left: 100px;
+}
+
+#block1 {
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  z-index: 1;
+}
+#block2 {
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  left: 100px;
+  background-color: green;
+  z-index: 2;
+}
+#block3 {
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  top: 200px;
+  left: 200px;
+  background-color: blue;
+  z-index: 3;
+}
