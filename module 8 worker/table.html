@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <script>
+      var worker;
+      if (typeof Worker !== 'undefined') {
+        if (typeof worker == 'undefined') {
+          worker = new Worker('table-worker.js');
+        }
+        let ul = document.getElementById('result');
+        worker.onmessage = function (e) {
+          document.getElementById('result').innerHTML = e.data;
+        };
+      } else {
+        document.getElementById('result').innerHTML =
+          'Web Workers are not supported in this browser';
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2 id="result"></h2>
+    <script src="table-worker.js" type="text/javascript"></script>
+  </body>
+</html>
