@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media</title>
+  </head>
+  <body>
+    <div>
+      <video
+        id="video"
+        src="sample.mp4"
+        style="transform: scaleY(0.6); min-height: 30%; border: solid 1px black"
+        height="30%"
+        width="50%"
+        autoplay
+      >
+        Video Not Supported</video
+      ><br />
+      <button onclick="replayVideo()">Replay</button>
+      <button onclick="fullscreen()">Fullscreen</button>
+    </div>
+    <div style="margin-top: 100px">
+      <audio id="audio" controls src="sample.mp4">Audio Not Supported</audio>
+      <br />
+      <button onclick="playpause()">Play/Pause</button>
+      <button onclick="increaseVolume()">Increase Volume</button>
+      <button onclick="decreaseVolume()">Decrease Volume</button>
+    </div>
+    <script>
+      const video = document.getElementById('video');
+      const audio = document.getElementById('audio');
+      function replayVideo() {
+        video.load();
+      }
+      function fullscreen() {
+        if (video.requestFullscreen) video.requestFullscreen();
+        else if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
+        else if (video.msRequestFullScreen) video.msRequestFullScreen();
+      }
+      function increaseVolume() {
+        if (audio.volume < 1) audio.volume += 0.1;
+        console.log(audio.volume);
+      }
+      function decreaseVolume() {
+        if (audio.volume > 0.2) audio.volume -= 0.1;
+        console.log(audio.volume);
+      }
+    </script>
+  </body>
+</html>
